@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Complexity depends on the sorting, the process of building Trie and the
  * length of searchWord.
- * 
+ *  
  * Sorting cost time O(m * n * logn), due to involving comparing String,
  * building Trie cost O(m * n) Time: O(m * n * logn + L), where m = average
  * length of products, n = products.length, L = searchWord.length(). space: O(m

@@ -18,11 +18,11 @@ public class OptimalUtilization {
 
 		List<int[]> result = getPairs(list1, list2, 7);
 		for (int[] a : result) {
-			System.out.println(a[0] + ":" + a[1]);
+	//		System.out.println(a[0] + ":" + a[1]);
 		}
-		
-		int[][] array3 = {{1, 3}, {2, 5}, {3, 7}, {4, 10}};
-		int[][] array4 = {{1, 2}, {2, 3}, {3, 4}, {4, 5}};
+
+		int[][] array3 = { { 1, 3 }, { 2, 5 }, { 3, 7 }, { 4, 10 } };
+		int[][] array4 = { { 1, 2 }, { 2, 3 }, { 3, 4 }, { 4, 5 } };
 		List<int[]> list3 = new ArrayList<>();
 		List<int[]> list4 = new ArrayList<>();
 		for (int[] a : array3) {
@@ -67,10 +67,11 @@ public class OptimalUtilization {
 						max = sum;
 						result.clear();
 					}
-					result.add(new int[] { a.get(i)[0], b.get(j).clone()[0] });
+					result.add(new int[] { a.get(i)[0], b.get(j)[0] });
 					int index = j - 1;
 					while (index >= 0 && b.get(index)[1] == b.get(index + 1)[1]) {
 						result.add(new int[] { a.get(i)[0], b.get(index)[0] });
+						index--;
 					}
 				}
 				i++;

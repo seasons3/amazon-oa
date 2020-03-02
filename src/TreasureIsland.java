@@ -1,6 +1,14 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * BFS solution: raverse the grid using BFS and keep track of the level Time:
+ * O(r *c) Space: O(min(r,c)) because in worst case where the grid is filled
+ * with lands, the size of queue can grow up to min(M,N).
+ * 
+ * @author leen
+ *
+ */
 public class TreasureIsland {
 	static class Coordinate {
 		int x;
@@ -36,6 +44,7 @@ public class TreasureIsland {
 		if (island == null || island.length == 0 || island[0].length == 0) {
 			return 0;
 		}
+		/// Traverse the grid using BFS and keep track of the level
 		Queue<Coordinate> queue = new LinkedList<>();
 		queue.offer(new Coordinate(0, 0));
 		island[0][0] = 'D'; // mark as visited

@@ -11,9 +11,12 @@ import java.util.Queue;
  * 
  * Use BFS search. In each level, pop a zombie(updated server) out of queue and
  * mark all its human(out of date servers) neighbors as infected, add them into
- * a new queue, decrease human(out of date servers) count and then mark zombie as
- * visited. if count equals 0 return hours otherwise
- * return -1;
+ * a new queue, decrease human(out of date servers) count and then mark zombie
+ * as visited. if count equals 0 return hours otherwise return -1;
+ * 
+ * Space Complexity: O(N).
+ * 
+ * Time complexity: O(r * c).
  * 
  * @author leen
  *
@@ -65,7 +68,6 @@ public class ZombieInMatrix {
 		if (needsUpdated == 0) {
 			return 0;
 		}
-		int count = 0;
 		int days = 0;
 		// bfs starting from initially updated servers
 		while (!queue.isEmpty()) {
@@ -96,13 +98,4 @@ public class ZombieInMatrix {
 		}
 		return -1;
 	}
-//	Time Complexity: O(N), where N is the number of cells in the grid.
-
-//	Space Complexity: O(N).
-	//Time complexity: O(r * c).
-//Time complexity: O(r * c).
-//	Space complexity: O(r * c).	Space complexity: O(r * c).
-
-
-
 }
