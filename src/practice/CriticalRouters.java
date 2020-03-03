@@ -9,13 +9,16 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 1)Apply DFS on a graph. Get the DFS tree. 2)A node which is visited earlier
- * is a "parent" of those nodes which are reached by it and visited later. 3)Any
- * child of a node does not have a path to any of the ancestors of its parent,
- * it means that removing this node would make this child disjoint from the
- * graph. 4)There is an exception: the root of the tree. If it has more than one
- * child, then it is an articulation point, otherwise not. Solution: Tarjan Time
+ * 1) Apply DFS on a graph to get the DFS tree.
+ * 2) In DFS tree, a vertex v is critical point if one of the following two conditions is true: 
+ *    2.1) if v is root of DFS tree, and it has at least two children
+ *    2.2) if v is not root of DFS tree, and there is not a child w of v such that 
+ *         there are no back edges from the tree rooted at w that go strictly above v.
+ * 
+ * Solution: Tarjan 
  * complexity: O(v+e) Space complexity: O(v+e)
+ * v is numRouters1
+ * e is numLinks1.length
  * 
  * 
  */

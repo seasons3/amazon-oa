@@ -3,16 +3,21 @@ package practice;
 import java.util.*;
 
 /**
- * Complexity depends on the sorting, the process of building Trie and the
- * length of searchWord.
- *  
- * Sorting cost time O(m * n * logn), due to involving comparing String,
- * building Trie cost O(m * n) Time: O(m * n * logn + L), where m = average
- * length of products, n = products.length, L = searchWord.length(). space: O(m
- * * n + L * m)
+ * Time complexity: 
  * 
- * The idea - Trie Sort the products. Build a trie, add a sug property where it
- * stores the suggested products for the current character.
+ * 1) sorting cost time O(m * n * logn), due to involving comparing String. 
+ * 2) building Trie cost O(m * n) 
+ * 3) searching L
+ * 
+ * Time: O(m * n * logn + L)
+ * 
+ * m = average length of products, n = products.length, L = searchWord.length().
+ * 
+ * space: O(m* n + L * m) including return list res, where m = average length of
+ * products
+ * 
+ * The idea is to sort the products. Build a trie, add a suggestions property
+ * where it stores the suggested products for the current character.
  * 
  * @author leen
  *
@@ -49,8 +54,8 @@ public class SearchSuggestionSystem {
 				}
 			}
 		}
-		
-		//search prefix
+
+		// search prefix
 		Trie cur = root;
 		customerquery = customerquery.toLowerCase();
 		for (char c : customerquery.toCharArray()) {

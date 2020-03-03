@@ -9,13 +9,18 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 /**
- * using a custom class for managing word stats and a PriorityQueue(minheap) for
- * sorting the top words. 
+ * Idea is 
+ * 1)store the competitors(toys) into map, along with their frequent count and quote count(review count)
+ * 2)loop through reviews(quotes):
+       - convert the review to lowercase, and split by space
+       - if a word is not a competitor(toy) then do nothing
+       - if a word is being used already for the current review(quote), then avoid to increase quote count
+       - else increase the freq count and quote count of the competitor(toy)
+ * 3) create a PriorityQueue(minheap), and provide the logic to sort the top words. 
  * Time complexity: O(W)+O(NlogK) 
- * W - total number of words(quotes* words in each quote) to buid dict
+ * W - total number of words(quotes * words in each quote) to build map
  * N total number of toys.
  * K max number of toys to return;
-
  * 
  * @author leen
  *

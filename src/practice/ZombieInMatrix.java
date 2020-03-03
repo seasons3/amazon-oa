@@ -5,16 +5,15 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Go through the matrix, locates all zombies(updated servers) and push them
- * into a queue, meanwhile using a count variable to store total amount of
- * human(out of date severs) available (needs to be updated).
+ * The idea is to user Breadth First Search.
  * 
- * Use BFS search. In each level, pop a zombie(updated server) out of queue and
- * mark all its human(out of date servers) neighbors as infected, add them into
- * a new queue, decrease human(out of date servers) count and then mark zombie
- * as visited. if count equals 0 return hours otherwise return -1;
+ * we can conquer this in two steps
+ * 1)  Find all the coordinate of the zombie position, meanwhile count the number of people too.
+ * 2)  BFS in level order, how many level is how many days it will take to convert all zombies.
+ * if the people count is 0 that means all is converted, otherwise return -1
+ *
  * 
- * Space Complexity: O(N).
+ * Space Complexity: O(r * c ).
  * 
  * Time complexity: O(r * c).
  * 
