@@ -64,7 +64,7 @@ public class TopNToys {
 		}
 		// Iterate through all the quotes, and update count
 		for (String quote : quotes) {
-			String[] words = quote.toLowerCase().split("\\W");
+			String[] words = quote.toLowerCase().split("\\W+");
 			Set<String> used = new HashSet<>();
 			for (String word : words) {
 				word = word.replaceAll("[^a-z]", "");
