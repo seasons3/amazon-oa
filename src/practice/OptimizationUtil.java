@@ -84,12 +84,12 @@ public class OptimizationUtil {
 					result.add(new int[] { a.get(i)[0], b.get(j)[0] });
 					int index = j - 1;
 					while (index >= 0 && b.get(index)[1] == b.get(index + 1)[1]) {
-						result.add(new int[] { a.get(i)[0], b.get(j)[0] });
+						result.add(new int[] { a.get(i)[0], b.get(index)[0] });
 						index--;
 
 					}
 				}
-				i++;
+				i++; // do not forget
 			}
 		}
 		return result;

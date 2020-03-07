@@ -17,7 +17,7 @@ import java.util.*;
  * products
  * 
  * The idea is to sort the products. Build a trie, add a suggestions property
- * where it stores the suggested products for the current character.
+ * where it stores the suggested products for the current prefix.
  * 
  * @author leen
  *
@@ -41,6 +41,7 @@ public class SearchSuggestionSystem {
 		}
 		Collections.sort(products);
 		Trie root = new Trie();
+		//insert current product to trie
 		for (String product : products) {
 			product = product.toLowerCase();
 			Trie cur = root;
@@ -59,6 +60,7 @@ public class SearchSuggestionSystem {
 		Trie cur = root;
 		customerquery = customerquery.toLowerCase();
 		for (char c : customerquery.toCharArray()) {
+			// if there exist products with current prefix
 			if (cur != null) {
 				cur = cur.sub[c - 'a'];
 			}

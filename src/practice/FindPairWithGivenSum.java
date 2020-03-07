@@ -34,7 +34,10 @@ public class FindPairWithGivenSum {
 		System.out.println(Arrays.toString(Find2Sum(nums5, target5)));
 		int[] nums6 = { 0, 1 };
 		int target6 = 30;
-		System.out.println(Arrays.toString(Find2Sum(nums5, target5)));
+		System.out.println(Arrays.toString(Find2Sum(nums6, target6)));
+		/**
+		 * [2, 3] [1, 5] [0, 2] null [0, 1] null
+		 */
 	}
 
 	private static int[] Find2Sum(int[] nums, int target) {

@@ -49,6 +49,21 @@ public class CopyListRandomPointer {
 			cur.next = cur.next.next;
 			cur = cur.next;
 		}
+		/**
+		 *  cur =  head;
+        Node copyHead = head.next;
+        Node copy = copyHead;
+        while ( copy.next!=null) {
+            cur.next = cur.next.next;
+            cur = cur.next;
+            
+            copy.next = copy.next.next;
+            copy = copy.next;
+        }
+        cur.next = cur.next.next;
+  
+        return copyHead;
+		 */
 		return dummy.next;
 
 	}

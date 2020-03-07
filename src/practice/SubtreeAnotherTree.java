@@ -4,8 +4,9 @@ package practice;
  * if a binary tree A is subtree of another B, it must be one of these: A equals
  * B (same tree), A’s left is subtree of B (recursive check) or A’s right is
  * subtree of B (recursive check). Space complexity : O(n). The depth of the
- * recursion tree can go upto nn. nn refers to the number of nodes in ss.
+ * recursion tree can go up to n. n refers to the number of nodes in s.
  * 
+ * Time complexity: O(mn) where m and n are number of nodes in given two trees.
  * @author leen
  *
  */

@@ -8,8 +8,8 @@ import java.util.Queue;
  * The idea is to user Breadth First Search.
  * 
  * we can conquer this in two steps
- * 1)  Find all the coordinate of the zombie position, meanwhile count the number of people too.
- * 2)  BFS in level order, how many level is how many days it will take to convert all zombies.
+ * 1)  Find all coordinates of the zombies, meanwhile count the number of people too.
+ * 2)  BFS in level order, how many level is how many days it will take to convert all people to zombies.
  * if the people count is 0 that means all is converted, otherwise return -1
  *
  * 

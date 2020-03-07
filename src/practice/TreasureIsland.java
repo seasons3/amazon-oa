@@ -7,7 +7,13 @@ import java.util.Queue;
  * 
  * Time: O(r *c) Space: O(min(r,c)) because in worst case where the grid is filled
  * with lands, the size of queue can grow up to min(M,N).
- * 
+ * 1) Create an empty queue, enqueue the source cell, and mark it as visited.
+ * 2) Do the following until queue is empty:
+ *      1) Pop the node from queue, increase distance and find all valid adjacent cells.
+ *      2) If any cell is destination node, return its distance.
+ *      3) Otherwise enqueue each valid cell, and mark it as visited 
+ *      
+ * 3) If all nodes in queue are processed, return distance, otherwise return -1;
  * @author leen
  *
  */

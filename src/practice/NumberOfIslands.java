@@ -65,6 +65,7 @@ public class NumberOfIslands {
 		queue.offer(new Coordinate(i, j));
 		while (!queue.isEmpty()) {
 			Coordinate coor = queue.poll();
+			// try all four directs to find any connected islands(1)
 			for (int dict = 0; dict < 4; dict++) {
 				int x = coor.x + deltaX[dict];
 				int y = coor.y + deltaY[dict];

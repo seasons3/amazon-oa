@@ -12,6 +12,17 @@ import java.util.PriorityQueue;
  */
 import java.util.Queue;
 
+/**
+ * idea is the length to pick up first will include more than once in total cost
+ * 1) create minheap and insert all length into minheap
+ * 2) do the following while the elements inside minheap is not one
+ *  2.1) pick first two element from minheap
+ *  2.2) add the above two values and put the added value back to minheap
+ *  2.3) main the total cost
+ * 3) return the total cost
+ * @author leen
+ *
+ */
 public class MinCostConnectRopes {
 	public static void main(String[] args) {
 		int[] files1 = { 8, 4, 6, 12 };

@@ -10,9 +10,9 @@ import java.util.Set;
 
 /**
  * Idea is 
- * 1)store the competitors(toys) into map, along with their frequent count and quote count(review count)
+ * 1)store each competitor(toy) into map, along with its overall frequency count and no of quotes containing the term
  * 2)loop through reviews(quotes):
-       - convert the review to lowercase, and split by space
+       - convert the review to lower case, and split into words
        - if a word is not a competitor(toy) then do nothing
        - if a word is being used already for the current review(quote), then avoid to increase quote count
        - else increase the freq count and quote count of the competitor(toy)
@@ -21,7 +21,10 @@ import java.util.Set;
  * W - total number of words(quotes * words in each quote) to build map
  * N total number of toys.
  * K max number of toys to return;
- * 
+ 
+  the occurrence ignore the toys exist in the same quote.
+
+
  * @author leen
  *
  */
